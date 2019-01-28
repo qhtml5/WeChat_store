@@ -1,3 +1,3 @@
 # Homepage
-This is Store homepage with virtual data.
+This is Store homepage with cloud database.
 
