@@ -39,6 +39,8 @@ Page({
       this.setData({
         userInfo
       })
+    }).catch(err => {
+      console.log('not authenticated yet');
     })
   },
 })
