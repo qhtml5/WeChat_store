@@ -34,4 +34,20 @@ module.exports = {
         return {}
       })
   },
+
+  getOrders() {
+    return util.isAuthenticated()
+      .then(() => {
+        return wx.cloud.callFunction({
+          name: 'getOrders',
+        })
+      })
+      .catch(() => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Please Login First'
+        })
+        return {}
+      })
+  },
 }
